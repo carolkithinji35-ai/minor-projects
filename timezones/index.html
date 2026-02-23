@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta title="Working with Timezones" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>time zones</title>
+
+    <style>
+      h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: blueviolet;
+      }
+      p {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: grey;
+      }
+      div {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        color: rgb(7, 145, 7);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timezones</h1>
+    <p>
+      Timezones are a complex topic in programming, but they are essential for
+      handling dates and times correctly across different regions of the world.
+      In this section, we will explore how to work with timezones in various
+      programming languages and libraries. We will cover topics such as
+      converting between timezones, handling daylight saving time, and using
+      timezone-aware date and time objects. By the end of this section, you
+      should have a solid understanding of how to manage timezones effectively
+      in your applications.
+    </p>
+    <p>
+      When working with timezones, it's important to use libraries that provide
+      robust support for timezone handling. For example, in Python, the `pytz`
+      library allows you to work with timezones and perform conversions between
+      them. In JavaScript, the `Intl.DateTimeFormat` API can be used to format
+      dates and times according to specific timezones. Additionally, many
+      programming languages have built-in support for timezones, so it's worth
+      exploring the documentation for your language of choice to see what
+      options are available.
+    </p>
+    <p>
+      It's also crucial to be aware of the potential pitfalls when working with
+      timezones, such as handling daylight saving time changes and ensuring that
+      your application correctly accounts for different timezones when
+      scheduling events or displaying times to users. Always test your timezone
+      handling code thoroughly, especially if your application will be used by
+      people in different parts of the world.
+    </p>
+    <h2>Moment JavaScript Library</h2>
+    <p>
+      The Moment JavaScript library is a popular tool for working with dates and
+      times in JavaScript. It provides a simple and intuitive API for parsing,
+      validating, manipulating, and formatting dates and times. With Moment, you
+      can easily handle timezones, perform date calculations, and format dates
+      in various ways. However, it's worth noting that Moment is now considered
+      a legacy project, and the developers recommend using modern alternatives
+      like Luxon or date-fns for new projects. Despite this, Moment remains
+      widely used in many existing applications and can still be a valuable tool
+      for managing timezones in JavaScript.
+    </p>
+    <h3>moment js formats cheat sheet</h3>
+    <p>
+      Here is a cheat sheet for common Moment.js date and time formats:formats:
+      <br />- `YYYY`: 4-digit year (e.g., 2024) <br />- `MM`: 2-digit month
+      (01-12) <br />- `DD`: 2-digit day of the month (01-31) <br />-`D` :
+      1-digit day of the month(1-31) <br />- `HH`: 2-digit hour in 24-hour
+      format (00-23) <br />- `hh`: 2-digit hour in 12-hour format (01-12)
+      <br />- `mm`: 2-digit minutes (00-59) <br />- `ss`: 2-digit seconds
+      (00-59) <br />- `A`: AM/PM <br />- `Z`: Timezone offset (e.g., +00:00)
+      <br />- `ZZ`: Timezone offset without colon (e.g., +0000) <br />- `dddd`:
+      Full name of the day of the week (e.g., Monday) <br />- `ddd`: Short name
+      of the day of the week (e.g., Mon) <br />- `MMMM`: Full name of the month
+      (e.g., January) <br />
+      `MMM`: Short name of the month (e.g., Jan) <br />- `Do`: Day of the month
+      with ordinal (e.g., 1st, 2nd, 3rd)
+    </p>
+
+    <h3>Challenge 1</h3>
+    <p>Import moment.js and moment time zone</p>
+
+    <h3>Challenge 2</h3>
+    <p>
+      Display the current date and time in Honolulu, Hawaii such is "It is
+      Saturday, October 8, 2023 12:42 AM in Honolulu, Hawaii"
+    </p>
+    <div id="current-date">👉 Date here 👈</div>
+
+    <h3>Challenge 3</h3>
+    <p>
+      Display the date and time here 10 years from now in Paris, France
+      following this format "10 years from now, it will be Friday, October 8,
+      2033 11:43 AM in Paris France"
+    </p>
+    <div id="future-date">👉 Date here 👈</div>
+
+    <h3>Challenge 4</h3>
+    <p>Display the local time zone here</p>
+    <div id="local-time-zone">👉 Time zone here 👈</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
