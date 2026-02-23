@@ -8,6 +8,6 @@ displayTime.addEventListener("change", (e) => {
       .format("dddd, MMMM D, YYYY hh:mm a");
     alert(`It is ${currentTime} in ${e.target.value} timezone `);
   } else {
-    alert("Please select a country");
+    alert("Please select a country!");
   }
 });
