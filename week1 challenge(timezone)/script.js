@@ -1,13 +1,14 @@
-let displayTime = document.querySelector("#countries");
-displayTime.addEventListener("change", (e) => {
-  if (e.target.value.length > 0) {
-    e.preventDefault();
-
+function showTime(event) {
+  event.preventDefault();
+  if (event.target.value.length > 0) {
     let currentTime = moment()
-      .tz(e.target.value)
+      .tz(event.target.value)
       .format("dddd, MMMM D, YYYY hh:mm a");
-    alert(`It is ${currentTime} in ${e.target.value} timezone `);
+    alert(`It is ${currentTime} in ${event.target.value} timezone `);
   } else {
     alert("Please select a country!");
   }
-});
+}
+
+let displayTime = document.querySelector("#countries");
+displayTime.addEventListener("change", showTime);
